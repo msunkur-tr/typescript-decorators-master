@@ -10,4 +10,3 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           IGNORED: "**/package.json\n**/package-lock.json"
         run: ls -lah
-
