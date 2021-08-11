@@ -17,9 +17,4 @@ jobs:
     steps:
       - name: step b1
         run: echo "github.event.workflow_run failure"
-  on-skip:
-    runs-on: ubuntu-latest
-    if: ${{ jobs.integration-test.if == 'failure' }}
-    steps:
-      - name: step c1
-        run: echo "github.event.workflow_run failure"
+
