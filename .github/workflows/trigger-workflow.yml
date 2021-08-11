@@ -2,7 +2,7 @@ name: trigger-workflow
 on: pull_request
 
 jobs:
-  size-label:
+  trigger-workflow:
     runs-on: ubuntu-latest
     steps:
       - name: trigger-workflow
