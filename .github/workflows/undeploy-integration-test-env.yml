@@ -17,6 +17,14 @@ jobs:
         run: echo "${{github.event.workflow_run.url}}"
       - name: step a5
         run: echo "${{github.event.workflow_run.check_suite}}"
+      - name: step a6
+        run: echo "${{github.event.workflow_run.head_branch}}"
+      - name: step a7
+        run: echo "${{github.event.workflow_run.head_sha}}"
+      - name: step a8
+        run: echo "${{github.event.workflow_run.status}}"
+      - name: step a9
+        run: echo "${{github.event.workflow_run.pull_requests}}"
   on-failure:
     runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.conclusion == 'failure' }}
