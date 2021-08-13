@@ -36,7 +36,7 @@ jobs:
         uses: actions/download-artifact@v2
         with: 
           name: student
-          path: student.json
+          path: .
       - name: list
         run: npx ts-node list.ts
       - name: read
