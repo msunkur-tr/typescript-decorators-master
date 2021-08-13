@@ -25,6 +25,14 @@ jobs:
         run: echo "${{github.event.workflow_run.status}}"
       - name: step a9
         run: echo "${{github.event.workflow_run.pull_requests}}"
+      - name: step a91
+        run: echo "${{github.event.workflow_run.repository}}"
+      - name: step a92
+        run: echo "${{github.event.workflow_run.organization}}"
+      - name: step a93
+        run: echo "${{github.event.workflow_run.sender}}"
+      - name: step a94
+        run: echo "${{github.event.workflow_run.installation}}"
   on-failure:
     runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.conclusion == 'failure' }}
