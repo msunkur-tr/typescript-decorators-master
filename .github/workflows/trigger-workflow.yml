@@ -11,8 +11,15 @@ jobs:
         uses: trilogy-group/action-npm-install-dependencies@v1
       - name: Build
         run: npm run build
-      - name: Analyze
-        run: npm run analyze
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install dependencies
+        uses: trilogy-group/action-npm-install-dependencies@v1
+      - name: Build
+        run: npm run build
         
   trigger-workflow:
     runs-on: ubuntu-latest
