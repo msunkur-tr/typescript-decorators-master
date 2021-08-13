@@ -11,7 +11,30 @@ jobs:
     steps:
       - name: step a1
         run: echo "github.event.workflow_run success"
-        run: echo "${{github.event.workflow_run.action}}"
+      - name: step a2
+        run: echo "${{github.event.workflow_run.conclusion}}"      
+      - name: step a3
+        run: echo "${{github.event.workflow_run.url}}"
+      - name: step a5
+        run: echo "${{github.event.workflow_run.check_suite}}"
+      - name: step a6
+        run: echo "${{github.event.workflow_run.head_branch}}"
+      - name: step a7
+        run: echo "${{github.event.workflow_run.head_sha}}"
+      - name: step a8
+        run: echo "${{github.event.workflow_run.status}}"
+      - name: step a9
+        run: echo "${{github.event.workflow_run.pull_requests}}"
+      - name: step a91
+        run: echo "${{github.event.workflow_run.repository}}"
+      - name: step a92
+        run: echo "${{github.event.workflow_run.organization}}"
+      - name: step a93
+        run: echo "${{github.event.workflow_run.sender}}"
+      - name: step a94
+        run: echo "${{github.event.workflow_run.installation}}"
+      - name: step a95
+        run: echo "Hello ${{ github.event.inputs.name }}"
   on-failure:
     runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.conclusion == 'failure' }}
