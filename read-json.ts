@@ -9,6 +9,6 @@ fs.readdir(testFolder, (err, files) => {
   });
 });
 
-let rawdata = fs.readFileSync('student.json');
+let rawdata = fs.readFileSync('./student.json');
 let student = JSON.parse(rawdata);
 console.log(student);
