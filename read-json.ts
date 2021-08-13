@@ -2,8 +2,12 @@
 'use strict';
 
 const fs = require('fs');
-console.log('__dirname');
-console.log(__dirname);
+const testFolder = './';
+fs.readdir(testFolder, (err, files) => {
+  files.forEach(file => {
+    console.log(file);
+  });
+});
 
 let rawdata = fs.readFileSync('student.json');
 let student = JSON.parse(rawdata);
