@@ -34,7 +34,7 @@ jobs:
       - name: step a94
         run: echo "${{github.event.workflow_run.installation}}"
       - name: step a95
-      - run: echo "Hello ${{ github.event.inputs.name }}!"
+        run: echo "Hello ${{ github.event.inputs.name }}"
   on-failure:
     runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.conclusion == 'failure' }}
