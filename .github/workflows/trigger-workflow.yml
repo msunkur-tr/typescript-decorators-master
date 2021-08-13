@@ -11,6 +11,8 @@ jobs:
         uses: trilogy-group/action-npm-install-dependencies@v1
       - name: read
         run: npx ts-node write-json.ts
+      - name: write
+        run: npx ts-node read-json.ts
   test:
     needs: analyze
     name: Test
