@@ -9,8 +9,6 @@ jobs:
       - uses: actions/checkout@v2
       - name: Install dependencies
         uses: trilogy-group/action-npm-install-dependencies@v1
-      - name: Build
-        run: npm run build
       - name: read
         run: npx ts-node write-json.ts
   test:
@@ -21,8 +19,6 @@ jobs:
       - uses: actions/checkout@v2
       - name: Install dependencies
         uses: trilogy-group/action-npm-install-dependencies@v1
-      - name: Build
-        run: npm run build
       - name: write
         run: npx ts-node read-json.ts
         
