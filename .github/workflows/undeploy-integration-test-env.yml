@@ -15,6 +15,8 @@ jobs:
         run: echo "${{github.event.workflow_run.conclusion}}"      
       - name: step a3
         run: echo "${{github.event.workflow_run.url}}"
+      - name: step a5
+        run: echo "${{github.event.workflow_run.check_suite}}"
   on-failure:
     runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.conclusion == 'failure' }}
