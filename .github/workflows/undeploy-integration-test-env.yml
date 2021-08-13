@@ -11,6 +11,7 @@ jobs:
     steps:
       - name: step a1
         run: echo "github.event.workflow_run success"
+      - name: step a2
         run: echo "${{github.event.workflow_run.action}}"
   on-failure:
     runs-on: ubuntu-latest
