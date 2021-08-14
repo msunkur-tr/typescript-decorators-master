@@ -11,4 +11,4 @@ let student = {
 };
  
 let data = JSON.stringify(student);
-fs.writeFileSync('student-2.json', data);
+fs.writeFileSync('student.json', data);
