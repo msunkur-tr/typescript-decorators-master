@@ -1,0 +1,13 @@
+name: create-key-file
+on: on: [push, pull_request]
+
+jobs:
+  create-key-file:
+    runs-on: ubuntu-latest
+    steps:
+      - name: create-key-file-openssl
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          IGNORED: "**/package.json\n**/package-lock.json"
+        run: ls -lah
+
