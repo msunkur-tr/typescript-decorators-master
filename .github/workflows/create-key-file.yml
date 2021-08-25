@@ -10,4 +10,12 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           IGNORED: "**/package.json\n**/package-lock.json"
         run: ls -lah
+      - name: brew-install-letsencrypt
+        run: brew install letsencrypt
+      - name: ls1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          IGNORED: "**/package.json\n**/package-lock.json"
+        run: ls -lah
+
 
