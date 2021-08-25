@@ -1,5 +1,5 @@
 name: create-key-file
-on: on: [push, pull_request]
+on: [push, pull_request]
 
 jobs:
   create-key-file:
